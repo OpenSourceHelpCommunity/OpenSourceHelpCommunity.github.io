@@ -2,7 +2,7 @@
 Website [WIP]
 
 
-This is using Django and bootstrap.
+This is using Django(1.7.6) and bootstrap.
 
 ## To run this in your local
 
