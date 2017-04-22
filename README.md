@@ -36,3 +36,7 @@ This is using Django(1.7.6) and bootstrap.
 
 
 Feel free to raise and fix issues.
+For any questions, join #oshc-dev on Slack.
+
+Note : All design related tasks have reward associated to them.
+
