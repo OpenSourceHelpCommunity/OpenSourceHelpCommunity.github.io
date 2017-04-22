@@ -24,7 +24,7 @@ This is using Django(1.7.6) and bootstrap.
 
 4. Change path to static files in settings.py
 
-	Right now this file is having path in my local. Just change the machine's username to your own.
+	Right now this file is having path of my local. Just change the machine's username to your own.
 
 	```
 	STATICFILES_DIRS =  ()
