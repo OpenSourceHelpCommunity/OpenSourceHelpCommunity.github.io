@@ -22,6 +22,13 @@ This is using Django(1.7.6) and bootstrap.
 	python manage.py syncdb
 	```
 
+4. Change path to static files in settings.py
+
+	Right now this file is having path in my local. Just change the machine's username to your own.
+
+	```
+	STATICFILES_DIRS =  ()
+	```
 4. Run the app
 	```
 	python manage.py runserver
