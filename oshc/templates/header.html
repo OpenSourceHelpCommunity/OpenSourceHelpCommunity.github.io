@@ -1,0 +1,13 @@
+{% load static %}
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+{% if site.author %}<meta name="author" content="{{ site.author }}">{% endif %}
+{% if site.description %}<meta name="description" content="{{ site.description }}">{% endif %}
+<meta name="generator" content="mynt v{{ site.version }}">
+
+<link rel="shortcut icon" href="{% static "assets/images/favicon.ico"%}" type="image/x-icon">
+
+<link href="{% static "assets/css/bootstrap.css"%}" rel="stylesheet">
+<link href="{% static "assets/css/app.css"%}" rel="stylesheet">
+

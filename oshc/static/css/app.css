@@ -1,0 +1,42 @@
+body {
+  padding: 20px 0;
+}
+
+#logo {
+  width: 180px;
+  height: 180px;
+}
+
+.navbar .navbar-brand {
+  color: #ED1B49;
+  font-size: 175%;
+  font-weight: 100;
+}
+.navbar .navbar-brand:hover {
+  color: rgb(255, 100, 100);
+}
+
+#organizers {
+  margin: 40px 0 40px;
+  background: #f4f4f4;
+  padding: 40px 20px 20px;
+  border-radius: 12px;
+}
+
+#organizers h2 {
+  font-weight: 100;
+}
+
+#organizers .title h2 {
+  font-size: 250%;
+  top: 85px;
+  color: #26A9E0;
+}
+
+.jumbotron {
+  background-color:#ffffff;
+  background-size:80px 50px;
+}
+.jumbotron h1 {
+  color: #26A9E0;
+}
