@@ -1,4 +1,6 @@
-# OpenSourceHelpCommunity.github.io
+# Open Source Help Community
+
+![OSHC](https://avatars0.githubusercontent.com/u/23719480?v=3&s=200)
 Website [WIP]
 
 
