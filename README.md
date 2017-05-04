@@ -4,8 +4,9 @@
 
 Website [WIP]
 
+[How it looks currently](https://gyazo.com/8395caa42290fb5a7d32d6b75c07ff53)
 
-This is using Django(1.7.6) and bootstrap. [How it looks currently?](https://gyazo.com/8395caa42290fb5a7d32d6b75c07ff53).
+This is using Django(1.7.6) and bootstrap.
 Feel free to suggest a better design.
 
 ## To run this in your local
