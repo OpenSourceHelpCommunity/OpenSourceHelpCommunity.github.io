@@ -12,7 +12,7 @@ Feel free to suggest a better design.
 	git clone git@github.com:OpenSourceHelpCommunity/OpenSourceHelpCommunity.github.io.git
 	```
 
-2. Go inside main Django app
+2. Go inside main Django app [Instructional video on installing Django](https://youtu.be/qgGIqRFvFFk)
 	```
 	cd oshc
 	```
