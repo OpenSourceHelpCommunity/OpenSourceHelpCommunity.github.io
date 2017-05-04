@@ -1,6 +1,7 @@
 # Open Source Help Community
 
 ![OSHC](https://avatars0.githubusercontent.com/u/23719480?v=3&s=200)
+
 Our goal is to provide an environment where people who work on Open Source projects can gather together to discuss them([What exactly is Open Source?](https://opensource.guide/how-to-contribute/))
 
 Website [WIP]
