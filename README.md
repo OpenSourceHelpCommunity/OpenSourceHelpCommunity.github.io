@@ -2,7 +2,9 @@
 
 ![OSHC](https://avatars0.githubusercontent.com/u/23719480?v=3&s=200)
 
-Our goal is to provide an environment where people who work on Open Source projects can gather together to discuss them([What exactly is Open Source?](https://opensource.guide/how-to-contribute/))
+Our goal is to provide an environment where people who work on Open Source projects can gather together to discuss them([What is Open Source?](https://opensource.guide/how-to-contribute/)). 
+
+We want to be the Stack Overflow of Open Source Software.
 
 Website [WIP]
 
