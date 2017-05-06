@@ -41,6 +41,8 @@ Feel free to suggest a better design.
 	```
 
 
+To deploy on heroku clone the code present in [heroku branch](https://github.com/OpenSourceHelpCommunity/OpenSourceHelpCommunity.github.io/tree/heroku).
+
 Feel free to raise and fix issues.
 For any questions, join #oshc-dev on Slack.
 
