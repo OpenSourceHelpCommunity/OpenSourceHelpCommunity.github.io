@@ -4,9 +4,8 @@
 
 We are trying to create a medium where people who want to start with contributing to open sources and open source contributors meet and discuss their thoughts and questions([Getting Started With Open Source](https://github.com/tapasweni-pathak/Getting-Started-With-Contributing-to-Open-Sources)). 
 
-Website [WIP]
+[Website](http://opensourcehelpcommunity.herokuapp.com/) [WIP]
 
-[How it looks currently](https://gyazo.com/8395caa42290fb5a7d32d6b75c07ff53)
 
 This is using [Django(1.7.6)](https://www.djangoproject.com/) and [Bootstrap](http://getbootstrap.com/).
 Feel free to suggest a better design.
