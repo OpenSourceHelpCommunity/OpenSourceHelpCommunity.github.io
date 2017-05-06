@@ -1,8 +1,14 @@
-# OpenSourceHelpCommunity.github.io
+# Open Source Help Community
+
+![OSHC](https://avatars0.githubusercontent.com/u/23719480?v=3&s=200)
+
+We are trying to create a medium where people who want to start with contributing to open sources and open source contributors meet and discuss their thoughts and questions([Getting Started With Open Source](https://github.com/tapasweni-pathak/Getting-Started-With-Contributing-to-Open-Sources)). 
+
 Website [WIP]
 
+[How it looks currently](https://gyazo.com/8395caa42290fb5a7d32d6b75c07ff53)
 
-This is using Django(1.7.6) and bootstrap. [How it looks currently?](https://gyazo.com/8395caa42290fb5a7d32d6b75c07ff53).
+This is using [Django(1.7.6)](https://www.djangoproject.com/) and [Bootstrap](http://getbootstrap.com/).
 Feel free to suggest a better design.
 
 ## To run this in your local
