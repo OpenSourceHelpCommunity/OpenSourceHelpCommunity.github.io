@@ -10,6 +10,15 @@ We are trying to create a medium where people who want to start with contributin
 This is using [Django(1.7.6)](https://www.djangoproject.com/) and [Bootstrap](http://getbootstrap.com/).
 Feel free to suggest a better design.
 
+
+## Installations
+Run
+```
+pip install -r requirements.txt
+```
+to install everything required to run this project on heroku as well as on your local.
+
+
 ## To run this in your local
 
 1. Clone this repository using
