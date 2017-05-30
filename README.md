@@ -53,7 +53,7 @@ to install everything required to run this project on heroku as well as on your 
 To deploy on heroku clone the code present in [heroku branch](https://github.com/OpenSourceHelpCommunity/OpenSourceHelpCommunity.github.io/tree/heroku).
 
 Feel free to raise and fix issues.
-For any questions, join #oshc-dev on Slack.
+For any questions, join #oshc-dev on Slack. Get an invite [here](https://opensourcehelp.herokuapp.com/).
 
 Note : All design related tasks have reward associated with them.
 
