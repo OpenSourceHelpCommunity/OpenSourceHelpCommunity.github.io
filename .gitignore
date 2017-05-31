@@ -87,3 +87,6 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# Ignore changes in settings.py
+oshc/oshc/settings.py
