@@ -7,7 +7,7 @@ We are trying to create a medium where people who want to start with contributin
 [Website](http://opensourcehelpcommunity.herokuapp.com/) [WIP]
 
 
-This is using [Django(1.7.6)](https://www.djangoproject.com/) and [Bootstrap](http://getbootstrap.com/).
+This is using [Django(1.11)](https://www.djangoproject.com/) and [Bootstrap](http://getbootstrap.com/).
 Feel free to suggest a better design.
 
 
@@ -31,24 +31,18 @@ to install everything required to run this project on heroku as well as on your 
 	cd oshc
 	```
 
-3. Syncdb
-
+3. Collectstatic files using
 	```
-	python manage.py syncdb
+	python manage.py collectstatic
 	```
 
-4. Change path to static files in settings.py
-
-	Right now this file is having path of my local. Just change the machine's username to your own.
-
-	```
-	STATICFILES_DIRS =  ()
-	```
 4. Run the app
 	```
 	python manage.py runserver
 	```
 
+To run the web app in Debug mode set the DEBUG environment variable.
+In Linux, run the `export DEBUG=True` command in the terminal.
 
 To deploy on heroku clone the code present in [heroku branch](https://github.com/OpenSourceHelpCommunity/OpenSourceHelpCommunity.github.io/tree/heroku).
 
