@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
-{% load staticfiles%}
+{% load static %}
 {% block content %}
   <div class="container">
     <div class="jumbotron text-center">
-		<img id="logo" src="{% static "assets/images/oshc-logo.png"%}" alt="" >
+		<img id="logo" src="{% static "main/images/oshc-logo.png"%}" alt="" >
         <h1>Open Source Help Community</h1>
         <h3>A Virtual Platform To Help People To Start Contributing To Open Source Projects.</h3>
     </div>
@@ -18,7 +18,7 @@
         <h2>Our Mission</h2>
 		<p>Open Source Help Community is an a virtual platform to help people to start contributing to open source projects.</p>      <p>OSHC is established with the idea in mind to reach those people who are interested in contributing to open source projects but find it difficult. OSHC organizes sessions with open source projects contributors and publishes material which will be useful for people to get started with contributing to open source projects.</p>
         <p>If you would like to share your thoughts or your journey with us, have ideas to make this great, or have questions, please get in touch at <a href="mailto:opensourcehelpcommunity@gmail.com">opensourcehelpcommunity@gmail.com</a>.</p>
-		<h2>Recent Tweets <img src="{% static "assets/images/twitter.png"%}" alt="" width=30 height=30></h2>
+		<h2>Recent Tweets <img src="{% static "main/images/twitter.png"%}" alt="" width=30 height=30></h2>
         <div class="twitter-feed">
 
 <a class="twitter-timeline" data-width="500" data-height="500" data-theme="light" data-link-color="#26A9E0" href="https://twitter.com/oshelpcommunity">Tweets by oshelpcommunity</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
