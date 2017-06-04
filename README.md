@@ -10,6 +10,7 @@ We are trying to create a medium where people who want to start with contributin
 This is using [Django(1.11)](https://www.djangoproject.com/) and [Bootstrap](http://getbootstrap.com/).
 Feel free to suggest a better design.
 
+Please submit your pull request on develop branch, it will have the most recent changes.
 
 ## Installations
 Run
