@@ -1,1 +1,1 @@
-web gunicorn oshc.wsgi --log-file -
+web: gunicorn --pythonpath oshc oshc.wsgi --log-file -
