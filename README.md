@@ -6,6 +6,7 @@ We are trying to create a medium where people who want to start with contributin
 
 [Website](http://opensourcehelpcommunity.herokuapp.com/) [WIP]
 
+After every commit, the `develop` branch on github is automatically deployed to opensourcehelpcommunity-dev.herokuapp.com and the `master` branch is automatically deployed to opensourcehelpcommunity.herokuapp.com . All the development is done on `develop` branch and once we're ready for a new release we merge the `develop` branch with the `master` branch. Please submit your pull request based on `develop` branch.
 
 This is using [Django(1.11)](https://www.djangoproject.com/) and [Bootstrap](http://getbootstrap.com/).
 Feel free to suggest a better design.
