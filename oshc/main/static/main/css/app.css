@@ -1,172 +1,178 @@
 /*   GLOBAL DEFINATIONS STARTS  */
-* {	
-	padding:0;
-	margin:0;
-	box-sizing:border-box;
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	transition:opacity 0.7s ease-in-out;
-	font-family:"Montserrat",sans-serif
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  transition: opacity 0.7s ease-in-out;
+  font-family: "Montserrat", sans-serif
 }
 
 body {
-	overflow-x:hidden;
+  overflow-x: hidden;
 }
 
 a {
-	cursor: pointer;
-	color: #0275d8;
-	text-decoration: none;
+  cursor: pointer;
+  color: #0275d8;
+  text-decoration: none;
 }
 
 .line-gap-10px {
-	height: 10px;
+  height: 10px;
 }
 
 
 /*   NAVBAR CSS STARTS  */
+
 .navbar {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .navbar-inverse .navbar-brand {
-	color: #eee;
+  color: #eee;
 }
 
 .navbar-inverse {
-	background-color: #24292e;
+  background-color: #24292e;
 }
 
 .navbar-inverse {
-	border-color: #24292e;
+  border-color: #24292e;
 }
 
 
 /*   SECTION ONE STARTS   */
+
 .main-section {
-	min-height: 70vh;
-	height: auto;
-	padding-top: 40px;
-	background: white;
-	background-color: white;
+  min-height: 70vh;
+  height: auto;
+  padding-top: 40px;
+  background: white;
+  background-color: white;
 }
 
 .logo-image {
-	width: 200px;
-	display: block;
-	margin-left: auto;
-	margin-right: auto
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
 }
 
 .jumbotron {
-	background-color: white;
+  background-color: white;
 }
 
 .jumbotron h1 {
-	font-size: 60px;
-	color: #0275d8;
+  font-size: 60px;
+  color: #0275d8;
 }
 
 .jumbotron h4 {
-	color: #999;
-	font-size: 18px;
-	padding-top: 20px;
+  color: #999;
+  font-size: 18px;
+  padding-top: 20px;
 }
 
 
 /*   SECTION TWO START   */
+
 .section-two {
-	height: auto;
-	padding: 70px 0;
-	background-color: #eee;
+  height: auto;
+  padding: 70px 0;
+  background-color: #eee;
 }
 
 .section-two h3 {
-	font-size: 30px;
-	color: #444444;
+  font-size: 30px;
+  color: #444444;
 }
 
 .bi {
-	text-align: center;
-	font-style: italic;
-	padding: 10px 0;
-	font-size: 15px;
+  text-align: center;
+  font-style: italic;
+  padding: 10px 0;
+  font-size: 15px;
 }
 
 .section-two .intro {
-	color: #666666;
-	font-size: 18px;
-	line-height: 35px;
+  color: #666666;
+  font-size: 18px;
+  line-height: 35px;
 }
 
 
 /*   SECTION THREE START   */
+
 .section-three {
-	height: auto;
-	min-height: 500px;
-	padding: 40px 0;
+  height: auto;
+  min-height: 500px;
+  padding: 40px 0;
 }
 
 .left-session-info {
-	padding: 30px 50px;
+  padding: 30px 50px;
 }
 
 .sRegister {
-	color: white;
-	font-size: 15px;
-	background-color: #0275d8;
-	border-color: #0275d8;
+  color: white;
+  font-size: 15px;
+  background-color: #0275d8;
+  border-color: #0275d8;
 }
 
 .sRegister a {
-	color: white;
-	text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .left-social-section {
-	padding: 0 50px;
+  padding: 0 50px;
 }
 
 
 /*   FOOTER CSS STARTS  */
+
 footer {
-	height: auto;
-	min-height: 120px;
-	padding-top: 10px;
-	background-color: #24292e;
+  height: auto;
+  min-height: 120px;
+  padding-top: 10px;
+  background-color: #24292e;
 }
 
 footer .container {
-	width: 70%;
+  width: 70%;
 }
 
 .rectangle {
-	height: 30px;
-	line-height: 30px;
-	margin-top: 15px;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 15px;
 }
 
 .rectangle ul {
-	list-style: none;
+  list-style: none;
 }
 
 .rectangle ul li {
-	width: 40px;
-	height: 30px;
-	color: #eee;
-	font-size: 22px;
-	display: inline-block;
+  width: 40px;
+  height: 30px;
+  color: #eee;
+  font-size: 22px;
+  display: inline-block;
 }
 
 .backToTop {
-	float: right;
-	color: #999;
+  float: right;
+  color: #999;
 }
 
 .backToTop a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .copyright {
-	color: #eee;
+  color: #eee;
 }
