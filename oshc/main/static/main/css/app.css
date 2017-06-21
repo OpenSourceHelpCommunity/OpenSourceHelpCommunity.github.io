@@ -12,6 +12,7 @@
 
 body {
   overflow-x: hidden;
+  padding-top: 50px;
 }
 
 a {
@@ -52,6 +53,8 @@ a {
   padding-top: 40px;
   background: white;
   background-color: white;
+  position: relative;
+  clear: both;
 }
 
 .logo-image {
@@ -63,6 +66,8 @@ a {
 
 .jumbotron {
   background-color: white;
+  word-wrap: break-word;
+  display: block;
 }
 
 .jumbotron h1 {
@@ -83,6 +88,8 @@ a {
   height: auto;
   padding: 70px 0;
   background-color: #eee;
+  word-wrap: break-word;
+  display: block;
 }
 
 .section-two h3 {
@@ -101,6 +108,7 @@ a {
   color: #666666;
   font-size: 18px;
   line-height: 35px;
+  text-align: justify;
 }
 
 
@@ -144,24 +152,14 @@ footer {
 
 footer .container {
   width: 70%;
+  position: sticky;
+  display: block;
 }
 
 .rectangle {
   height: 30px;
   line-height: 30px;
   margin-top: 15px;
-}
-
-.rectangle ul {
-  list-style: none;
-}
-
-.rectangle ul li {
-  width: 40px;
-  height: 30px;
-  color: #eee;
-  font-size: 22px;
-  display: inline-block;
 }
 
 .backToTop {
@@ -174,5 +172,70 @@ footer .container {
 }
 
 .copyright {
+  color: #fff;
+  line-height: 30px;
+  min-height: 30px;
+  padding: 7px 0;
+}
+
+.social {
+  color: #fff;
+  line-height: 30px;
+  min-height: 30px;
+  padding: 7px 0;
+}
+
+.social .left-align {
+  text-align: left;
+}
+
+.social .right-align {
+  text-align: right;
+}
+
+.social ul {
+  list-style: none;
+}
+
+.social ul li {
+  width: 40px;
+  height: 30px;
   color: #eee;
+  font-size: 22px;
+  display: inline-block;
+}
+
+.social a {
+  color: #fff;
+}
+
+
+/*Media queries*/
+
+@media (max-width: 320px) {
+  .jumbotron h1 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 480px) {
+  .jumbotron h1 {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-section {
+    min-height: 50vh;
+    height: auto;
+    clear: both;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-section {
+    min-height: 50vh;
+    height: auto;
+    clear: both;
+  }
 }
