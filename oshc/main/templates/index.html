@@ -1,60 +1,79 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-  <div class="container">
-    <div class="jumbotron text-center">
-		<img id="logo" src="{% static "main/images/oshc-logo.png"%}" alt="" >
-        <h1>Open Source Help Community</h1>
-        <h3>A Virtual Platform To Help People To Start Contributing To Open Source Projects.</h3>
-    </div>
-  </div>
+	<section class="main-section">
+		<div class="container">
+			<div class="jumbotron text-center">
+				<img class="logo-image img-responsive" src="{% static "main/images/oshc-logo.png"%}" alt="Open Source Help Community Logo"/>
+				<h1>Open Source Help Community</h1>
+				<h4>A Virtual Platform To Help People To Start Contributing To Open Source Projects</h4>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-two">
+		<div class="container">
+			<h3>Our Mission</h3>
+			<p class="bi">
+				<b>"</b>Open Source Help Community is an a virtual platform to help people to start contributing to open source projects<b>"</b>
+			</p>
+			<p class="intro">
+				OSHC is established with the idea in mind to reach those people who are interested in contributing to open source projects but find it difficult. OSHC organizes sessions with open source projects contributors and publishes material which will be useful for people to get started with contributing to open source projects.
+			</p>
+			<div class="line-gap-10px"></div>
+			<p class="intro">
+				If you would like to share your thoughts or your journey with us, have ideas to make this great, or have questions, please get in touch at <a href="mailto:opensourcehelpcommunity@gmail.com">opensourcehelpcommunity@gmail.com</a>
+			</p>
+		</div>
+	</section>
+
+	<section class="section-three">
+		<div class="container">
+			<h3>Upcoming Sessions</h3>
+
+			<div class="row">
+				<div class="col-md-7 left-session-info">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Open Source Contributor's Chat Session with Himanshu Mishra</h3>
+						</div>
+						<div class="panel-body">
+							<a href="https://orkohunter.net">Himanshu</a> is a pre-final year undergraduate student at IIT Kharagpur. He has been a Google Summer of Code student in 2015 and 2016 and is currently a mentor in Python Software Foundation.
+							<div class="line-gap-10px"></div>
+							<i>Date: Wed, June 21, 2017 8:30 PM – 9:30 PM IST</i>
+							<div class="line-gap-10px"></div>
+							<button type="button" class="btn btn-lg btn-primary sRegister">
+								<a href="https://www.eventbrite.com/e/open-source-contributors-chat-session-with-himanshu-mishra-tickets-35227478336?ref=ecal">Register Now!</a>
+							</button>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Open Source Contributor's Chat Session with Joannah Nanjekye</h3>
+						</div>
+						<div class="panel-body">
+							<a href="https://nanjekyejoannah.github.io/">Joannah Nanjekye</a> is a software engineer that graduated from Makerere University in Uganda with a Bachelor of Science Degree in software Engineering.
+							<div class="line-gap-10px"></div>
+							<i>Sat, July 8, 2017 5:30 PM – 6:30 PM IST</i>
+							<div class="line-gap-10px"></div>
+							<button type="button" class="btn btn-lg btn-primary sRegister">
+								<a href="https://www.eventbrite.com/e/open-source-contributors-chat-session-with-joannah-nanjekye-tickets-35324459409?ref=ecal">Register Now!</a>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-5 left-social-section">
+					<div class="twitter-feed">
+						<a class="twitter-timeline" data-width="500" data-height="500" data-theme="light" data-link-color="#26A9E0" href="https://twitter.com/oshelpcommunity">
+							Tweets by oshelpcommunity
+						</a>
+						<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 
-  <div class="container marketing">
-
-    <div class="row">
-
-      <div class="col-sm-8">
-        <h2>Our Mission</h2>
-		<p>Open Source Help Community is an a virtual platform to help people to start contributing to open source projects.</p>      <p>OSHC is established with the idea in mind to reach those people who are interested in contributing to open source projects but find it difficult. OSHC organizes sessions with open source projects contributors and publishes material which will be useful for people to get started with contributing to open source projects.</p>
-        <p>If you would like to share your thoughts or your journey with us, have ideas to make this great, or have questions, please get in touch at <a href="mailto:opensourcehelpcommunity@gmail.com">opensourcehelpcommunity@gmail.com</a>.</p>
-		<h2>Recent Tweets <img src="{% static "main/images/twitter.png"%}" alt="" width=30 height=30></h2>
-        <div class="twitter-feed">
-
-<a class="twitter-timeline" data-width="500" data-height="500" data-theme="light" data-link-color="#26A9E0" href="https://twitter.com/oshelpcommunity">Tweets by oshelpcommunity</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-      </div>
-
-      <div class="col-sm-4">
-		  <h2>Upcoming Sessions <!-- <img src=" class="img-circle" width=30 height=30> -->
-</h2>
-        <!-- EventBrite widget -->
-<div style="width:195px; text-align:center;" ><iframe  src="https://www.eventbrite.com/calendar-widget?eid=33954516874" frameborder="0" height="377" width="195" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:12px; padding:10px 0 5px; margin:2px; width:195px; text-align:center;" ><a class="powered-by-eb" style="color: #ADB0B6; text-decoration: none;" target="_blank" href="http://www.eventbrite.com/">Powered by Eventbrite</a></div></div>
-      </div>
-
-    </div>
-
-  </div>
-  <div class="container">
-
-    <!-- FOOTER -->
-    <footer>
-      <div class="row">
-          <div class="col-sm-3">
-              <p>&copy; 2017 OSHC</p>
-          </div>
-          <div class="col-sm-6">
-              <a href=" https://github.com/OpenSourceHelpCommunity"><i class="fa fa-github" style="font-size:30px;padding-right:8px;"></i></a>
-              <a href="https://twitter.com/oshelpcommunity"><i class="fa fa-twitter" style="font-size:30px;padding-right:8px;"></i></a>
-              <a href="https://www.facebook.com/opensourcehelpcommunity/"><i class="fa fa-facebook" style="font-size:30px;padding-right:8px;"></i></a>
-          </div>
-          <div class="col-sm-3">
-              <p><a href="#">Back to top</a></p>
-          </div>
-
-      </div>
-
-
-    </footer>
-  </div>
 {% endblock %}
