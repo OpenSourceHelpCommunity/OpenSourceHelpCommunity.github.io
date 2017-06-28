@@ -1,4 +1,10 @@
-Django==1.11.2
-gunicorn==19.7.1
-pytz==2017.2
-whitenoise==3.3.0
+Django==1.7.6
+South==1.0.1
+argparse==1.2.1
+wsgiref==0.1.2
+dj-database-url==0.3.0
+dj-static==0.0.6
+gunicorn==19.1.1
+psycopg2==2.5.1
+whitenoise==2.0.6
+static==0.4
