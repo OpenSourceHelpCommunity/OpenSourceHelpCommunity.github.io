@@ -4,7 +4,7 @@
 
 We are trying to create a medium where people who want to start with contributing to open sources and open source contributors meet and discuss their thoughts and questions([Getting Started With Open Source](https://github.com/tapasweni-pathak/Getting-Started-With-Contributing-to-Open-Sources)). 
 
-[Website](http://opensourcehelpcommunity.herokuapp.com/) [WIP]
+[Website](http://opensourcehelpcommunity.herokuapp.com/)
 
 After every commit, the `develop` branch on github is automatically deployed to [opensourcehelpcommunity-dev.herokuapp.com](http://opensourcehelpcommunity-dev.herokuapp.com/) and the `master` branch is automatically deployed [to opensourcehelpcommunity.herokuapp.com](http://opensourcehelpcommunity.herokuapp.com/) . All the development is done on `develop` branch and once we're ready for a new release we merge the `develop` branch with the `master` branch. Please submit your pull request based on `develop` branch.
 
