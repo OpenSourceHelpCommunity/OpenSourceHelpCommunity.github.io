@@ -10,9 +10,14 @@
   font-family: "Montserrat", sans-serif
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   overflow-x: hidden;
-  padding-top: 50px;
+  margin-bottom: 120px;
 }
 
 a {
@@ -44,17 +49,26 @@ a {
   border-color: #24292e;
 }
 
+.vertical-align {
+  display: block;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+  float: none;
+}
+
 
 /*   SECTION ONE STARTS   */
 
 .main-section {
   min-height: 70vh;
   height: auto;
-  padding-top: 40px;
+  padding-top: 100px;
   background: white;
   background-color: white;
   position: relative;
   clear: both;
+  width: 100%;
 }
 
 .logo-image {
@@ -145,13 +159,18 @@ a {
 
 footer {
   height: auto;
-  min-height: 120px;
   padding-top: 10px;
   background-color: #24292e;
 }
 
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 120px;
+}
+
 footer .container {
-  width: 70%;
   position: sticky;
   display: block;
 }
@@ -162,12 +181,12 @@ footer .container {
   margin-top: 15px;
 }
 
-.backToTop {
+.back-to-top {
   float: right;
   color: #999;
 }
 
-.backToTop a {
+.back-to-top a {
   text-decoration: none;
 }
 
@@ -238,4 +257,118 @@ footer .container {
     height: auto;
     clear: both;
   }
+}
+
+/*Registration CSS starts*/
+
+.form-title {
+  color: #555;
+  font-size: 28px;
+  font-weight: 400;
+  display: block;
+}
+
+.account-wall {
+  margin-top: 20px;
+  padding: 40px 0px 20px 0px;
+  background-color: #f7f7f7;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 10px;
+  display: block;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.form-registration {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-registration .field-title {
+  font-weight: 400;
+  color: #000000;
+  font-size: 14px;
+  display: block;
+}
+
+.form-registration .helptext {
+  font-weight: 400;
+  color: #607D8B;
+  font-size: 12px;
+  display: block;
+}
+
+.form-registration .form-registration-heading, .form-registration .checkbox {
+  margin-bottom: 10px;
+}
+
+.form-registration .checkbox {
+  font-weight: normal;
+}
+
+.form-registration .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.form-registration .form-control:focus {
+  z-index: 2;
+}
+
+.form-registration input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.form-registration input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.form-registration input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.forgot-password {
+  margin-top: 10px;
+}
+
+.new-account {
+  display: block;
+  margin-top: 10px;
+}
+
+.form-registration .btn {
+  background: #0275d8;
+}
+
+.form-registration p:hover {
+  color: #0275d8;
+}
+
+.form-registration button:hover {
+  background: #ffffff;
+  color: #0275d8;
+}
+
+.form-registration button:focus {
+  background: #0275d8;
 }
