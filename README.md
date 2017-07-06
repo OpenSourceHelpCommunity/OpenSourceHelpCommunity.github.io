@@ -46,8 +46,6 @@ to install everything required to run this project on heroku as well as on your 
 To run the web app in Debug mode set the DEBUG environment variable.
 In Linux, run the `export DEBUG=True` command in the terminal.
 
-To deploy on heroku clone the code present in [heroku branch](https://github.com/OpenSourceHelpCommunity/OpenSourceHelpCommunity.github.io/tree/heroku).
-
 Feel free to raise and fix issues.
 For any questions, join #oshc-dev on Slack. Get an invite [here](https://opensourcehelp.herokuapp.com/).
 
