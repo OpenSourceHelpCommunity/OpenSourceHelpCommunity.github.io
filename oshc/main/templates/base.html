@@ -25,7 +25,13 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="https://www.youtube.com/channel/UC1_IAby-9me3iICtxuiDL5Q">Sessions</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sessions <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="https://www.youtube.com/channel/UC1_IAby-9me3iICtxuiDL5Q">View Session</a></li>
+              <li><a href="{% url 'request_session' %}">Request a Session</a></li>
+            </ul>
+          </li>
           <li><a href="https://github.com/OpenSourceHelpCommunity">Resources</a></li>
           <li><a href="mailto:opensourcehelpcommunity@gmail.com">Contact</a></li>
           <li><a href="https://opensourcehelp.herokuapp.com/">Join Us!</a></li>

@@ -43,9 +43,6 @@ a {
 
 .navbar-inverse {
   background-color: #24292e;
-}
-
-.navbar-inverse {
   border-color: #24292e;
 }
 
@@ -154,6 +151,15 @@ a {
   padding: 0 50px;
 }
 
+iframe {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: 0;
+}
+
 
 /*   FOOTER CSS STARTS  */
 
@@ -258,6 +264,7 @@ footer .container {
     clear: both;
   }
 }
+
 
 /*Registration CSS starts*/
 
