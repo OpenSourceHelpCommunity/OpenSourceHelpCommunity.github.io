@@ -24,6 +24,13 @@ DEBUG = os.getenv("DEBUG", False)
 
 ALLOWED_HOSTS = ['*']
 
+# Tuple of people who get error notifications
+ADMINS = [
+    ('Tapasweni Pathak','tapaswenipathak@gmail.com'),
+    ('Nikhita Raghunath','nikitaraghunath@gmail.com'),
+    ('Ibrahim Jarif','jarifibrahim@gmail.com'),
+    ('Amar Prakash Pandey', 'amar.om1994@gmail.com')
+]
 
 # Application definition
 
