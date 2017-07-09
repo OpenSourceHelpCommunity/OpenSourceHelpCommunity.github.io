@@ -76,6 +76,11 @@ TEMPLATES = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = (
+    'main.regbackend.EmailLoginBackend',
+    'django.contrib.auth.backends.ModelBackend'
+)
+
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
