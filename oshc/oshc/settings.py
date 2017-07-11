@@ -103,6 +103,7 @@ REGISTRATION_AUTO_LOGIN = True
 LOGIN_REDIRECT_URL = 'home'
 # and are trying to access pages requiring authentication
 LOGIN_URL = '/accounts/login/'
+LOGOUT_REDIRECT_URL = 'home'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
