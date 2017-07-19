@@ -13,6 +13,7 @@ services:
 
 install:
   - pip install -r requirements.txt
+  - pip install coveralls
 
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
@@ -25,3 +26,4 @@ script:
 
 after_success:
   - coverage report
+  - coveralls
