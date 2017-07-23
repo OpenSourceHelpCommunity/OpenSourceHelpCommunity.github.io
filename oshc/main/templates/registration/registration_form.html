@@ -21,11 +21,16 @@ x{% block content %}
               </p>
               <p class="required"><label class="required" for="id_password1">
                                     {% trans 'Password:' %}</label>
-                <input class="form-control" id="id_password1" name="password1" type="password" required/>
-              </p>
+                <input class="form-control" id="id_password1" name="password1"  type="password" required/><br>
+                <div class="strength-wrapper">
+                  <span class="strength weak">&nbsp;</span>
+                  <span class="strength good">&nbsp;</span>
+                  <span class="strength strong">&nbsp;</span>
+                  <span class="strength verystrong">&nbsp;</span>
+                  <span id="passwordStrengthString"></span>
+                </div>
               <p class="required">
-                <label class="required" for="id_password2">
-                                        {% trans 'Password confirmation:' %}</label>
+                <label class="required" for="id_password2">{% trans 'Password confirmation:' %}</label>
                 <input class="form-control" id="id_password2" name="password2" type="password" required/>
                 <span class="helptext">{% trans 'Enter the same password as before, for verification.' %}</span>
               </p>
