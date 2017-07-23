@@ -54,7 +54,7 @@ class EmailLoginBackendTests(TestCase):
         self.assertIsNone(returned_user)
 
 
-class HomeViewTests(SimpleTestCase):
+class HomeViewTests(TestCase):
 
     def test_get_request(self):
         response = self.client.get(reverse("home"))
