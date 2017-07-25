@@ -1,6 +1,6 @@
 # Open Source Help Community
 
- [![Build Status](https://travis-ci.org/OpenSourceHelpCommunity/OpenSourceHelpCommunity.github.io.svg?branch=develop)](https://travis-ci.org/OpenSourceHelpCommunity/OpenSourceHelpCommunity.github.io)
+[![Build Status](https://travis-ci.org/OpenSourceHelpCommunity/OpenSourceHelpCommunity.github.io.svg?branch=develop)](https://travis-ci.org/OpenSourceHelpCommunity/OpenSourceHelpCommunity.github.io) [![Coverage Status](https://coveralls.io/repos/github/OpenSourceHelpCommunity/OpenSourceHelpCommunity.github.io/badge.svg?branch=develop)](https://coveralls.io/github/OpenSourceHelpCommunity/OpenSourceHelpCommunity.github.io?branch=develop)
 
 ![OSHC](https://avatars0.githubusercontent.com/u/23719480?v=3&s=200)
 
