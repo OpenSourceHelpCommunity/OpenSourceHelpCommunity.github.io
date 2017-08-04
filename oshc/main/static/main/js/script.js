@@ -6,22 +6,18 @@ $(document).ready(function() {
     }, 1000);
   });
   //  code for PASSWORD STRENGTH METER
-  $(".strength-wrapper").css("visibility", "hidden"); //hide the strength meter initially
-  console.log("checker2");
-  $("#id_password1").bind("keyup", function() {
+  $(".strength-wrapper").css("visibility", "hidden"); 
+  $("#password-one").bind("keyup", function() {
     if ($(this).val().length === 0) {
-      $(".strength-wrapper").css("visibility", "hidden");//hide the strength meter when the password field is empty
+      $(".strength-wrapper").css("visibility", "hidden");
       $("#passwordStrengthString").html("");
-
-      return;
     } else {
       $(".strength-wrapper").css("visibility", "visible");
     }
-    var check = ["[A-Z]", "[a-z]", "[0-9]", "[$@$!%*#?&]"];//takes all uppercase & lowercase alphabets,digits,special characters
-
+    var check = ["[A-Z]", "[a-z]", "[0-9]", "[$@$!%*#?&]"];
     var checkCounter = 0;
-    for (var i = 0, len = check.length; i < len; i++) {
-      if (new RegExp(check[i]).test($(this).val())) {      //checks the password 
+    for (var i = 0; i < check.length; i++) {
+      if (new RegExp(check[i]).test($(this).val())) {      
         checkCounter++;
       }
     }
@@ -29,7 +25,6 @@ $(document).ready(function() {
       checkCounter++;
     }
     var passwordStrength = "";
-    // strength meter display depending upon the value of checkCounter
     switch (checkCounter) {
       case 0:
       case 1:
@@ -66,6 +61,6 @@ $(document).ready(function() {
         $("#passwordStrengthString").css("color", "#2E7D32");
         break;
     }
-    $("#passwordStrengthString").html(passwordStrength);// returns the strength string to the html
+    $("#passwordStrengthString").html(passwordStrength);
   });
 });

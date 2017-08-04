@@ -379,24 +379,26 @@ footer .container {
 .form-registration button:focus {
   background: #0275d8;
 }
+
 /*css for strength meter*/
-.strength-wrapper{
+
+.strength-wrapper {
     margin-top: -33px;
 }
-.strength-wrapper .strength{
+
+.strength-wrapper .strength {
   float:left;
-  margin-top: 3px;
   width:72px;
   height:3px;
-  margin: 0px 3px 0px 0px;
+  margin-right: 3px;
 }
-#passwordStrengthString{
+
+#passwordStrengthString {
   font-size: 0.8em;
   margin-left: -299px;
   font-weight: bold;
-  
 }
 
-.zone{
+.zone {
   display:none;
 }
