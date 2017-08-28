@@ -30,34 +30,25 @@ $(document).ready(function() {
       case 1:
         passwordStrength = "Weak";
         $(".weak").css("background-color", "#E53935");
-        $(".good").css("background-color", "#EEEEEE");
-        $(".strong").css("background-color", "#EEEEEE");
-        $(".verystrong").css("background-color", "#EEEEEE");
+        $('.good, .strong, .verystrong').css({'background-color': '#EEEEEE'});
         $("#passwordStrengthString").css("color", "#E53935");
         break;
       case 2:
       case 3:
         passwordStrength = "Good";
-        $(".weak").css("background-color", "#FFEB3B");
-        $(".good").css("background-color", "#FFEB3B");
-        $(".strong").css("background-color", "#EEEEEE");
-        $(".verystrong").css("background-color", "#EEEEEE");
+        $('.weak, .good').css({'background-color': '#FFEB3B'});
+        $('.strong, .verystrong').css({'background-color': '#EEEEEE'});
         $("#passwordStrengthString").css("color", "#FFEB3B");
         break;
       case 4:
         passwordStrength = "Strong";
-        $(".weak").css("background-color", "#64DD17");
-        $(".good").css("background-color", "#64DD17");
-        $(".strong").css("background-color", "#64DD17");
+         $('.weak, .good, .strong').css({'background-color': '#64DD17'});
         $(".verystrong").css("background-color", "#EEEEEE");
         $("#passwordStrengthString").css("color", "#64DD17");
         break;
       case 5:
         passwordStrength = "Very Strong";
-        $(".weak").css("background-color", "#2E7D32");
-        $(".good").css("background-color", "#2E7D32");
-        $(".strong").css("background-color", "#2E7D32");
-        $(".verystrong").css("background-color", "#2E7D32");
+        $('.weak, .good, .strong, .verystrong').css({'background-color': '#2E7D32'});
         $("#passwordStrengthString").css("color", "#2E7D32");
         break;
     }
