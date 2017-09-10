@@ -28,19 +28,19 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sessions <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="https://www.youtube.com/channel/UC1_IAby-9me3iICtxuiDL5Q">View Session</a></li>
-              <li><a href="{% url 'request_session' %}">Request a Session</a></li>
+              <li><a href="https://www.youtube.com/channel/UC1_IAby-9me3iICtxuiDL5Q" target="_blank">View Session</a></li>
+              <li><a href="{% url 'request_session' %}" target="_blank">Request a Session</a></li>
             </ul>
           </li>
-          <li><a href="https://github.com/OpenSourceHelpCommunity">Resources</a></li>
-          <li><a href="mailto:opensourcehelpcommunity@gmail.com">Contact</a></li>
-          <li><a href="https://opensourcehelp.herokuapp.com/">Join Us!</a></li>
+          <li><a href="https://github.com/OpenSourceHelpCommunity" target="_blank">Resources</a></li>
+          <li><a href="mailto:opensourcehelpcommunity@gmail.com" target="_blank">Contact</a></li>
+          <li><a href="https://opensourcehelp.herokuapp.com/" target="_blank">Join Us!</a></li>
           {% if user.is_authenticated %}
           <li><a href="#!">Hey {{ user.username }}!</a></li>
           <li><a href="{% url 'auth_logout' %}">Logout</a></li>
           {% else %}
-          <li><a href="{% url 'auth_login' %}">Sign In</a></li>
-          <li><a href="{% url 'registration_register' %}">Sign Up</a></li>
+          <li><a href="{% url 'auth_login' %}" target="_blank">Sign In</a></li>
+          <li><a href="{% url 'registration_register' %}" target="_blank">Sign Up</a></li>
           {% endif %}
         </ul>
       </div>
@@ -60,16 +60,16 @@
             <ul>
               <span class="col-sm-6 left-align">
 								<li>
-									<a href="https://www.facebook.com/opensourcehelpcommunity/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+									<a href="https://www.facebook.com/opensourcehelpcommunity/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 								</li>
 								<li>
-									<a href="https://twitter.com/oshelpcommunity"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+									<a href="https://twitter.com/oshelpcommunity" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 								</li>
 								<li>
-									<a href="https://github.com/OpenSourceHelpCommunity"><i class="fa fa-github" aria-hidden="true"></i></a>
+									<a href="https://github.com/OpenSourceHelpCommunity" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
 								</li>
 								<li>
-									<a href="https://www.youtube.com/channel/UC1_IAby-9me3iICtxuiDL5Q"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+									<a href="https://www.youtube.com/channel/UC1_IAby-9me3iICtxuiDL5Q" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
 								</li>
 							</span>
               <span class="col-sm-6 back-to-top right-align">
