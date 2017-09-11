@@ -35,13 +35,6 @@
           <li><a href="https://github.com/OpenSourceHelpCommunity" target="_blank">Resources</a></li>
           <li><a href="mailto:opensourcehelpcommunity@gmail.com" target="_blank">Contact</a></li>
           <li><a href="https://opensourcehelp.herokuapp.com/" target="_blank">Join Us!</a></li>
-          {% if user.is_authenticated %}
-          <li><a href="#!">Hey {{ user.username }}!</a></li>
-          <li><a href="{% url 'auth_logout' %}">Logout</a></li>
-          {% else %}
-          <li><a href="{% url 'auth_login' %}" target="_blank">Sign In</a></li>
-          <li><a href="{% url 'registration_register' %}" target="_blank">Sign Up</a></li>
-          {% endif %}
         </ul>
       </div>
     </div>
