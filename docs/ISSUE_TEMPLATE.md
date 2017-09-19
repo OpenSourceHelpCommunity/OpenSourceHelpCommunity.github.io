@@ -1,9 +1,10 @@
 <!-- Thank you for submitting this issue!
 -->
 
-**Is this a BUG REPORT or FEATURE REQUEST?**:
-
-Provide a more detailed introduction to this issue and why it's relevant. 
+**I'm submitting a ...**  (check one with "x")
+- [ ] bug report
+- [ ] feature request
+- [ ] support request => Please do not submit support requests here, instead ask your query in our slack channel at https://opensourcehelp.slack.com/. Request invite [here](https://opensourcehelp.herokuapp.com)
 
 **Description**:
 
@@ -19,7 +20,7 @@ Please provide an ordered list on how to reproduce the issue.
 
 **Steps to Reproduce**:
 
-if relevant, please include a screenshot.
+If relevant, please include screenshots and logs.
 
 **Screenshots (if any)**:
 
