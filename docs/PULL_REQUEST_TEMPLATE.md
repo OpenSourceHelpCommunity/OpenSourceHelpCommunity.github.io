@@ -1,10 +1,10 @@
 <!-- Thank you for submitting this PR. You are awesome!
 -->
 
-**Status**:
-- [ ] Ready
-- [ ] In Development
-- [ ] On Hold
+**Checklist**
+
+- [ ] My branch is up-to-date with the upstream `develop` branch.
+- [ ] I have added necessary documentation (if appropriate).
 
 **Which issue does this PR fix?**: fixes #
 
@@ -22,7 +22,7 @@ Some tips for you to write the instructions:
 - Start after checking out this branch
 - Include any setup required, such as migrating databases, etc.
 
-**Testing instructions:**:
+**Testing instructions:**
 
 If there is any work still left to do, please add it here.
 
