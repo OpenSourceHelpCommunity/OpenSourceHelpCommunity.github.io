@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.contrib import admin
 
-from main.models import chatSession
+from main.models import chatSession, Contest
 
 
 class chatSessionAdmin(admin.ModelAdmin):
@@ -11,3 +11,4 @@ class chatSessionAdmin(admin.ModelAdmin):
 
 
 admin.site.register(chatSession, chatSessionAdmin)
+admin.site.register(Contest)
