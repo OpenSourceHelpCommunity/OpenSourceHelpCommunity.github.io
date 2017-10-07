@@ -8,15 +8,17 @@
 		</div>
             <h3>List of Upcoming Contests:</h3>
 
-			<ul>
 			{% for contest in contest_list %}
-				<li> <h4> <a href="{{contest.link}}">{{contest.name}}</a> </h4> </li>
-				<strong>Start Date:</strong> {{contest.start_date}}<br>
-				<strong>End Date:</strong> {{contest.end_date}}<br>
-				<strong>Description:</strong> {{contest.description}}
-		    {% endfor %}
-			</ul>
-
+                <div class="panel panel-default">
+                    <div class="panel-heading"><a href="{{contest.link}}">{{contest.name}}</a></div>
+                    <div class="panel-body">
+                        <strong>Start Date:</strong> {{contest.start_date}}<br>
+                        <strong>End Date:</strong> {{contest.end_date}}<br>
+                        <strong>Description:</strong> {{contest.description}}
+                    </div>
+                </div>
+            {% endfor %}
+        
 	</div>
 </section>
 {% endblock %}
