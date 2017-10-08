@@ -36,7 +36,11 @@ def add_contest(request):
     contest.end_date = datetime.strptime(end_date, '%Y-%m-%d').date()
     contest.start_date = datetime.strptime(start_date, '%Y-%m-%d').date()
     contest.save()
-    return HttpResponseRedirect("/contests/")
+    return HttpResponseRedirect("/submit_contest/")
+
+
+def submit_contest(request):
+    return render(request, 'contest_submission.html')
 
 
 def handler404(request):

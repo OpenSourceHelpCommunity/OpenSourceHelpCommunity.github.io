@@ -7,4 +7,5 @@ urlpatterns = [
     url(r'^contests/', views.contests, name="contests"),
     url(r'^contest_new/', views.contest_new, name="contest_new"),
     url(r'^add_contest/', views.add_contest, name="add_contest"),
+    url(r'^submit_contest/', views.submit_contest, name="submit_contest"),
 ]

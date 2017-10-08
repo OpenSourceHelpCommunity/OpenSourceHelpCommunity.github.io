@@ -47,6 +47,7 @@ class Migration(migrations.Migration):
                     help_text='Contest details', max_length=512, null=True)),
                 ('start_date', models.DateField(null=True)),
                 ('end_date', models.DateField(null=True)),
+                ('approved', models.BooleanField(default=False)),
             ],
         ),
     ]

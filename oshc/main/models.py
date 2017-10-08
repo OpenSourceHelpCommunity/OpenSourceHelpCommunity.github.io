@@ -24,6 +24,7 @@ class Contest(models.Model):
                                    help_text="Contest details", null=True)
     start_date = models.DateField(null=True)
     end_date = models.DateField(null=True)
+    approved = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
