@@ -1,10 +1,9 @@
 from django.shortcuts import render
-
+from django.http import HttpResponseRedirect
+from main.models import chatSession, Contest
+from datetime import datetime
 from django.shortcuts import render_to_response
-
 from django.template import RequestContext
-
-from main.models import chatSession
 
 
 def home(request):
@@ -15,6 +14,33 @@ def home(request):
 
 def request_session(request):
     return render(request, 'session.html')
+
+
+def contests(request):
+    contest_list = Contest.objects.all()
+    return render(request, 'contests.html',
+                  context={'contest_list': contest_list})
+
+
+def contest_new(request):
+    return render(request, 'contest_edit.html')
+
+
+def add_contest(request):
+    contest = Contest()
+    contest.name = request.POST.get("name", "null")
+    contest.link = request.POST.get("link", "null")
+    start_date = request.POST.get("start_date", "null")
+    end_date = request.POST.get("end_date", "null")
+    contest.description = request.POST.get("desc", "null")
+    contest.end_date = datetime.strptime(end_date, '%Y-%m-%d').date()
+    contest.start_date = datetime.strptime(start_date, '%Y-%m-%d').date()
+    contest.save()
+    return HttpResponseRedirect("/submit_contest/")
+
+
+def submit_contest(request):
+    return render(request, 'contest_submission.html')
 
 
 def handler404(request):
