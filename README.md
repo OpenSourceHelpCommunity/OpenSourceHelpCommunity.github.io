@@ -8,15 +8,19 @@ We are trying to create a medium where people who want to start with contributin
 
 [Website](http://opensourcehelpcommunity.herokuapp.com/) [WIP]
 
-After every commit, the `develop` branch on github is automatically deployed to [opensourcehelpcommunity-dev.herokuapp.com](http://opensourcehelpcommunity-dev.herokuapp.com/) and the `master` branch is automatically deployed [to opensourcehelpcommunity.herokuapp.com](http://opensourcehelpcommunity.herokuapp.com/) . All the development is done on `develop` branch and once we're ready for a new release we merge the `develop` branch with the `master` branch. Please submit your pull request based on `develop` branch.
+## Deployement details
+After every commit
 
-This is using [Django(1.11)](https://www.djangoproject.com/) and [Bootstrap](http://getbootstrap.com/).
-Feel free to suggest a better design.
+1. The `predev` branch on GitHub is automatically deployed to [opensourcehelpcommunity-predev.herokuapp.com](http://opensourcehelpcommunity-predev.herokuapp.com/).
+2. The `develop` branch on github is automatically deployed to [opensourcehelpcommunity-dev.herokuapp.com](http://opensourcehelpcommunity-dev.herokuapp.com/).
+3. The `master` branch is automatically deployed [to opensourcehelpcommunity.herokuapp.com](http://opensourcehelpcommunity.herokuapp.com/) . 
 
-Please submit your pull request on develop branch, it will have the most recent changes.
+This is using [Django(1.11)](https://www.djangoproject.com/) and [Bootstrap](http://getbootstrap.com/)
 
 ## How to Contribute
 This is an Open Source project and we would be happy to see contributors who report bugs and file feature requests submitting pull requests as well. This project adheres to the Collaborative [code of conduct](https://github.com/OpenSourceHelpCommunity/OpenSourceHelpCommunity.github.io/blob/develop/CODE_OF_CONDUCT.md). By participating, you expect to maintain the code of conduct. Before creating `New issue` and `Pull request`, please refer to the [template](docs).  
+
+All the development is done on `predev` branch and once we're ready for testing the deployment in real environment with databases we merge the `predev` branch with the `develop` branch. When we're ready for new release we merge `develop` with `master` to deploy it on our main website. **Please submit your pull request based on `predev` branch.**
 
 ## Installations
 Run
