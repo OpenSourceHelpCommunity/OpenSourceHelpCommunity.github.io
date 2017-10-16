@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+h3 {
+    text-align: center;
+}
+span
+{
+    display: block;
+}
+</style>
+<section class="main-section">
+	<div class="container">
+            <h3>List of Upcoming Contests</h3>
+            <div class="container-fluid">
+                <div class="row">
+                    {% for contest in contest_list %}
+                        {% if contest.approved %}
+                            <div class="col-lg-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" style="background-color: #0275d8;color:white">{{contest.name}}</div>
+                                    <div class="panel-body">
+                                        <span><span class="glyphicon glyphicon-globe"></span> <a href="{{contest.link}}">{{contest.link}}</a></span>
+                                        <span><span class="glyphicon glyphicon-time"></span> {{contest.start_date}}-{{contest.end_date}}</span>
+                                        <span><span class="glyphicon glyphicon-info-sign"></span> {{contest.description}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="Button" align="center" style="margin-bottom:70px; margin-top:20px;">
+                <a href="{% url 'contest_new' %}" class="btn btn-default" style="background-color:#0275d8;color:white;">Submit a New Contest</a>
+            </div>
+	</div>
+</section>
+{% endblock %}

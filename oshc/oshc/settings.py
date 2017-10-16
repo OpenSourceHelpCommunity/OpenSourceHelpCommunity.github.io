@@ -78,6 +78,11 @@ TEMPLATES = [
 
 DATABASES = { 'default': dj_database_url.config() }
 
+# Get DATABASE_URL environment variable and update default DATABASE settings
+# This setting is required for Heroku
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
