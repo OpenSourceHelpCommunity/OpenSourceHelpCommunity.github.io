@@ -354,11 +354,11 @@ footer .container {
   border-top-right-radius: 0;
 }
 
-.forgot-password {
+.form-registration .forgot-password {
   margin-top: 10px;
 }
 
-.new-account {
+.form-registration .new-account {
   display: block;
   margin-top: 10px;
 }
@@ -378,27 +378,4 @@ footer .container {
 
 .form-registration button:focus {
   background: #0275d8;
-}
-
-/*css for strength meter*/
-
-.strength-wrapper {
-    margin-top: -33px;
-}
-
-.strength-wrapper .strength {
-  float:left;
-  width:72px;
-  height:3px;
-  margin-right: 3px;
-}
-
-#passwordStrengthString {
-  font-size: 0.8em;
-  margin-left: -299px;
-  font-weight: bold;
-}
-
-.zone {
-  display:none;
 }
