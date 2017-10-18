@@ -402,3 +402,21 @@ footer .container {
 .zone {
   display:none;
 }
+
+/* CONTEST SUBMISSION PAGE CSS STARTS */
+.vcenter {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  height: 90vh;
+  z-index: -100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.subtitle {
+  margin: 0 !important;
+}
