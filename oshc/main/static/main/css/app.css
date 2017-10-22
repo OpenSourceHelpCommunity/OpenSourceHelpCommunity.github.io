@@ -354,11 +354,11 @@ footer .container {
   border-top-right-radius: 0;
 }
 
-.forgot-password {
+.form-registration .forgot-password {
   margin-top: 10px;
 }
 
-.new-account {
+.form-registration .new-account {
   display: block;
   margin-top: 10px;
 }
