@@ -1,0 +1,95 @@
+{% extends "account/base.html" %}
+{% load static %}
+{% load i18n %}
+{% load account socialaccount %}
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+{% block content %}
+<section class="main-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-4 col-md-offset-4">
+        <h1 class="form-title text-center">{% trans "Sign In" %}</h1>
+        <div class="alert alert-danger hidden" role="alert">
+            {% trans "A user with this username don't exists." %}
+        </div>
+        <div class="account-wall">
+          <img class="profile-img" src="{% static 'main/images/user.png' %}"
+          alt="">
+          <form class="login" method="post" action="{% url 'account_login' %}">
+            {% csrf_token %}
+            <div class="form-registration">
+              <p class="required field-title">
+                {% if form.username.errors %}
+                  {% for error in form.username.errors %}
+                    <div style="font-size: 12px;" class="alert alert-danger alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      {{ error|escape }}</div>
+                  {% endfor %}
+                {% endif %}
+                  <label class="required" for="id_login">{% trans 'Username:' %}</label>
+                  <input class="form-control" type="text" name="login" placeholder="Username" autofocus="autofocus" maxlength="150" required id="id_login" />
+              </p>
+              <p>
+                {% if form.password.errors %}
+                  {% for error in form.password.errors %}
+                    <div class="alert alert-danger" role="alert">{{ error|escape }}</div>
+                  {% endfor %}
+                {% endif %}
+                  <label class="required" for="id_password">{% trans 'Password:' %}</label>
+                  <input class="form-control" type="password" name="password" placeholder="Password" required id="id_password" />
+              </p>
+              <label class="checkbox pull-left">
+                  <input type="checkbox" name="remember" id="id_remember" value="remember-me" />
+                  <span class="clearfix"></span>
+                  Remember me
+              </label>
+              <a class="button secondaryAction pull-right forgot-password" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a><span class="clearfix"></span>
+              <button class="btn btn-lg btn-primary btn-block" type="submit">{% trans 'Sign In' %}</button>
+            </div>
+          </form>
+        </div>
+        <br>
+        {% get_providers as socialaccount_providers %}
+        {% if socialaccount_providers %}
+          <p>
+            {% blocktrans with site.name as site_name %}
+              Please sign in with one of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
+              for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
+      <div class="socialaccount_ballot">
+        <ul class="socialaccount_providers">
+          {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+        </ul>
+        <div class="login-or">{% trans 'or' %}</div>
+      </div>
+      {% include "socialaccount/snippets/login_extra.html" %}
+      {% else %}
+      <p class="text-center">{% blocktrans %}If you have not created an account yet, then please
+      <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+      {% endif %}     
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block javascript %}
+  <script>
+    $("#id_login").change(function() {
+      var username = $(this).val();
+      $.ajax({
+          url: '/ajax/validate_username/',
+          data: {
+              'username': username
+          },
+          dataType: 'json',
+          success: function(data) {
+              if (data.is_present == false) {
+                $(".alert").removeClass("hidden");
+                setTimeout(function(){
+                  $(".alert").addClass("hidden");
+                }, 5000);
+              }
+          }
+      });
+  });
+  </script>
+{% endblock %}
