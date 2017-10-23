@@ -22,7 +22,7 @@ before_script:
   - python manage.py collectstatic --noinput
 
 script:
-  - coverage run --source='main' manage.py test --verbosity 2
+  - coverage run --source=main,authentication  manage.py test --verbosity 2
 
 after_success:
   - coverage report
