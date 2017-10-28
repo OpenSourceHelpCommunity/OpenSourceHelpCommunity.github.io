@@ -1,6 +1,6 @@
 # Open Source Help Community
 
-[![Build Status](https://travis-ci.org/OpenSourceHelpCommunity/OpenSourceHelpCommunity.github.io.svg?branch=develop)](https://travis-ci.org/OpenSourceHelpCommunity/OpenSourceHelpCommunity.github.io) [![Coverage Status](https://coveralls.io/repos/github/OpenSourceHelpCommunity/OpenSourceHelpCommunity.github.io/badge.svg?branch=develop)](https://coveralls.io/github/OpenSourceHelpCommunity/OpenSourceHelpCommunity.github.io?branch=develop)
+[![Build Status](https://travis-ci.org/OpenSourceHelpCommunity/OpenSourceHelpCommunity.github.io.svg?branch=predev)](https://travis-ci.org/OpenSourceHelpCommunity/OpenSourceHelpCommunity.github.io) [![Coverage Status](https://coveralls.io/repos/github/OpenSourceHelpCommunity/OpenSourceHelpCommunity.github.io/badge.svg?branch=predev)](https://coveralls.io/github/OpenSourceHelpCommunity/OpenSourceHelpCommunity.github.io?branch=predev)
 
 ![OSHC](https://avatars0.githubusercontent.com/u/23719480?v=3&s=200)
 
@@ -13,7 +13,7 @@ After every commit
 
 1. The `predev` branch on GitHub is automatically deployed to [opensourcehelpcommunity-predev.herokuapp.com](http://opensourcehelpcommunity-predev.herokuapp.com/).
 2. The `develop` branch on github is automatically deployed to [opensourcehelpcommunity-dev.herokuapp.com](http://opensourcehelpcommunity-dev.herokuapp.com/).
-3. The `master` branch is automatically deployed [to opensourcehelpcommunity.herokuapp.com](http://opensourcehelpcommunity.herokuapp.com/) . 
+3. The `master` branch is automatically deployed [to opensourcehelpcommunity.herokuapp.com](http://opensourcehelpcommunity.herokuapp.com/) .
 
 This is using [Django(1.11)](https://www.djangoproject.com/) and [Bootstrap](http://getbootstrap.com/)
 
