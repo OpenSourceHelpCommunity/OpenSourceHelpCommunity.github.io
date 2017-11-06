@@ -26,9 +26,10 @@ class RequestSessionViewTests(SimpleTestCase):
 
 class ChatSessionCreateTestCase(TestCase):
     def setUp(self):
-        timestamp = datetime.date.today()
+        self.start_date = timezone.make_aware(datetime.datetime(2017, 11, 6, 12, 10, 5))
+        self.end_date = timezone.make_aware(datetime.datetime(2017, 12, 15, 22, 45, 50))
         chatSession.objects.create(title="oshc-session", profile_name="test_name", profile_url="http://google.com/", description="This is a sample description",
-                                   start_date=datetime.date.today(), end_date=datetime.date.today() + datetime.timedelta(days=1), register_url="http://google.com/")
+                                   start_date=self.start_date, end_date=self.end_date, register_url="http://google.com/")
 
     def test_title(self):
         SessionTitle = chatSession.objects.get(title="oshc-session")
@@ -49,14 +50,13 @@ class ChatSessionCreateTestCase(TestCase):
         self.assertEqual(SessionDescription.description,
                          "This is a sample description")
 
-    # def test_start_date(self):
-    #     timestamp =datetime.date.today()
-    #     ContestStartDate = chatSession.objects.get(start_date=datetime.datetime.fromtimestamp(timestamp, timezone.utc))
-    #     self.assertEqual(ContestStartDate.start_date, datetime.datetime.fromtimestamp(timestamp, timezone.utc))
+    def test_start_date(self):
+        ContestStartDate = chatSession.objects.get(start_date=self.start_date)
+        self.assertEqual(ContestStartDate.start_date, self.start_date)
 
-    # def test_end_date(self):
-    #     ContestEndDate = chatSession.objects.get(end_date=datetime.date.today() + datetime.timedelta(days=1))
-    #     self.assertEqual(ContestEndDate.end_date, datetime.date.today() + datetime.timedelta(days=1))
+    def test_end_date(self):
+        ContestEndDate = chatSession.objects.get(end_date=self.end_date)
+        self.assertEqual(ContestEndDate.end_date, self.end_date)
 
     def test_register_url(self):
         SessionRegisterUrl = chatSession.objects.get(
@@ -98,13 +98,3 @@ class ContestCreateValidation(TestCase):
         c = Client()
         response = c.post('/contest_new/', {'name': 'oshc', 'link': 'http://google.com/', 'description': 'This is a sample description', 'start_date': '2014-04-03', 'end_date': '2014-04-04', 'approved': 'True'})
         self.assertEqual(response.status_code, 200)
-
-# class ContestFormTest(TestCase):
-
-#     def test_ContestForm_valid(self):
-#         form = Contest(data = {'name': 'oshc', 'link': 'http://google.com/', 'description': 'This is a sample description', 'start_date': '2014-04-03', 'end_date': '2014-04-04', 'approved': 'True'})
-#         self.assertTrue(form.is_valid())
-
-#     def test_ContestForm_invalid(self):
-#         form = Contest(data={'name': '112', 'link': 'google.com/', 'description': 'This is a sample description', 'start_date': '9999-99-99', 'end_date': 'csdd-dd-dd', 'approved': 'True'})
-#         self.assertFalse(form.is_valid())
