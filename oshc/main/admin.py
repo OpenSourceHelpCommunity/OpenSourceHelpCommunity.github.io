@@ -11,7 +11,8 @@ class chatSessionAdmin(admin.ModelAdmin):
 
 
 class contestAdmin(admin.ModelAdmin):
-    list_display = ('name', 'link', 'description', 'start_date', 'end_date', 'approved')
+    list_display = ('name', 'link', 'description', 'start_date', 'end_date',
+                    'approved')
     actions = ['approve_contest']
 
     def approve_contest(self, request, queryset):
@@ -22,6 +23,7 @@ class contestAdmin(admin.ModelAdmin):
             message_bit = "{} contests were".format(contest_approved)
         self.message_user(request, "{} approved.".format(message_bit))
     approve_contest.short_description = "Approve"
+
 
 admin.site.register(chatSession, chatSessionAdmin)
 admin.site.register(Contest, contestAdmin)

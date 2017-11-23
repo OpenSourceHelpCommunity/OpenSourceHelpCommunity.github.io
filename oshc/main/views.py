@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from main.models import chatSession, Contest
-from datetime import datetime
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from .forms import ContestForm
@@ -37,6 +36,7 @@ def add_contest(request):
     else:
         form = ContestForm()
     return render(request, 'contest_edit.html', {'form': form})
+
 
 def submit_contest(request):
     return render(request, 'contest_submission.html')

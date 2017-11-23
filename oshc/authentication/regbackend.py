@@ -3,7 +3,8 @@ from django.contrib.auth import get_user_model
 
 class EmailLoginBackend(object):
     '''
-    This class checks that the user can be authenticated via our backend and if it fails than normal authentication backend is used.
+    This class checks that the user can be authenticated via our backend and
+    if it fails than normal authentication backend is used.
     '''
 
     def authenticate(self, username=None, password=None):
@@ -15,7 +16,7 @@ class EmailLoginBackend(object):
         except user_cls.DoesNotExist:
             return None
         return None
-        
+
     def get_user(self, user_id):
         user_cls = get_user_model()
         try:
