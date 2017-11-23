@@ -22,6 +22,7 @@ before_script:
   - python manage.py collectstatic --noinput
 
 script:
+  - flake8 .
   - coverage run --source='main' manage.py test --verbosity 2
 
 after_success:
