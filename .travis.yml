@@ -1,4 +1,5 @@
-language: python
+language:
+  - python
 
 notification:
   email:
@@ -6,14 +7,17 @@ notification:
     on_failure: always
 
 python:
+  - 3.4
   - 3.6
 
 services:
   - postgresql
 
+before_install:
+  - pip3 install --upgrade pip3
 install:
-  - pip install -r requirements.txt
-  - pip install coveralls
+  - pip3 install -r requirements.txt
+  - pip3 install coveralls
 
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
