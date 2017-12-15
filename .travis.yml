@@ -16,6 +16,7 @@ install:
   - pip install coveralls
 
 before_script:
+  -  export SECRET_KEY='x1-pogt0-b5owbgq0=ui02-4v)bba!bg&1m8_$)8-&13(907qf'
   - psql -c 'create database travis_ci_test;' -U postgres
   - cd oshc/
   - python manage.py migrate --noinput
