@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from main.models import chatSession, Contest
+from main.models import chatSession, Contest, Journey
 from .forms import ContestForm
 
 
@@ -38,3 +38,9 @@ def add_contest(request):
 
 def submit_contest(request):
     return render(request, 'contest_submission.html')
+
+
+def journey(request):
+    journey_list = Journey.objects.order_by('start_date')
+    return render(request, 'journey.html',
+                  context={'Journey': journey_list})

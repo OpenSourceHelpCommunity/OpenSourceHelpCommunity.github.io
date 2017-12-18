@@ -3,10 +3,14 @@ from __future__ import unicode_literals
 
 from django.contrib import admin
 
-from main.models import chatSession, Contest
+from main.models import chatSession, Contest, Journey
 
 
 class chatSessionAdmin(admin.ModelAdmin):
+    list_display = ('title', 'start_date')
+
+
+class journeyAdmin(admin.ModelAdmin):
     list_display = ('title', 'start_date')
 
 
@@ -26,4 +30,5 @@ class contestAdmin(admin.ModelAdmin):
 
 
 admin.site.register(chatSession, chatSessionAdmin)
+admin.site.register(Journey, journeyAdmin)
 admin.site.register(Contest, contestAdmin)

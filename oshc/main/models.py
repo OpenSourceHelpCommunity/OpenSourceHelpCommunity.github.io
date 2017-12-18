@@ -29,3 +29,11 @@ class Contest(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Journey(models.Model):
+    title = models.CharField(max_length=128, help_text="Journey title")
+    start_date = models.DateField(null=True)
+
+    def __str__(self):
+        return self.title
