@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="timeline">
+<body>
+  <ul>
+    {% if Journey %}
+      {% for j in Journey %}
+      <li>
+      <div> {{j.start_date}}<br>{{j.title}} </div>
+      </li> 
+    <!-- more list items here -->
+      {% endfor %}
+    {% else %}
+      <li>
+      <div> No journey available </div>
+      </li> 
+    {% endif %}
+  </ul>
+</body>
+</section>
+{% endblock %}

@@ -33,9 +33,17 @@
             </ul>
           </li>
           <li><a href="https://github.com/OpenSourceHelpCommunity" target="_blank">Resources</a></li>
-            <li><a href="{% url 'contests' %}" target="_blank">Contests</a></li>
+          <li><a href="{% url 'contests' %}" target="_blank">Contests</a></li>
+          <li><a href="{% url 'journey' %}" target="_blank">Journey</a></li>
           <li><a href="mailto:opensourcehelpcommunity@gmail.com" target="_blank">Contact</a></li>
           <li><a href="https://opensourcehelp.herokuapp.com/" target="_blank">Join Us!</a></li>
+          {% if user.is_authenticated %}
+          <li><a href="#!">Hey {{ user.username }}!</a></li>
+          <li><a href="{% url 'account_logout' %}">Logout</a></li>
+          {% else %}
+          <li><a href="{% url 'account_login' %}">Sign In</a></li>
+          <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+          {% endif %}
         </ul>
       </div>
     </div>
@@ -65,6 +73,9 @@
 								<li>
 									<a href="https://www.youtube.com/channel/UC1_IAby-9me3iICtxuiDL5Q" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
 								</li>
+                <li>
+									<a href="https://opensourcehelp.herokuapp.com/" target="_blank"><i class="fa fa-slack" aria-hidden="true"></i></a>
+								</li>
 							</span>
               <span class="col-sm-6 back-to-top right-align">
 								<a id="toTop" name="Back to top!">Back to top</a>
@@ -85,6 +96,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="{% static "main/js/script.js" %}"></script>
+  {% block javascript %}{% endblock %}
 </body>
 
 </html>
