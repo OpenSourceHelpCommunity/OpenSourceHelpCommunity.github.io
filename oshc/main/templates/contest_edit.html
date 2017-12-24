@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <link href="{% static 'main/css/bootstrap-datetimepicker.min.css' %}" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{% static 'main/js/moment.min.js' %}"></script>
+    <script src="{% static 'main/js/bootstrap-datetimepicker.min.js' %}"></script>
+    <form name="newContest" method="POST" style="margin-top:70px;" class="form-horizontal"
+          action="{% url 'add_contest' %}">
+        {% crispy form %}
+        <div class="form-group">
+            <div style="margin-bottom: 10px;" class="col-xs-offset-5 col-xs-8">
+                <button type="submit" class="save btn btn-default">SUBMIT</button>
+            </div>
+        </div>
+    </form>
+
+    <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $(function () {
+            $('.datepicker').datetimepicker(
+                {
+                    format: 'YYYY-MM-DD',
+                }
+            );
+        });
+
+        // protect against invalid time ranges
+        $("#id_start_date").on("dp.change", function (e) {
+            $('#id_end_date').data("DateTimePicker").minDate(e.date);
+        });
+    });
+    </script>
+{% endblock %}

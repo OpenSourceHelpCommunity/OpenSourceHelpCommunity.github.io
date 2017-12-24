@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="jumbotron text-xs-center">
+  <div class="container text-center vcenter">
+      <h1 class="display-3">Thank you!</h1>
+      <p class="lead subtitle"><strong>Your contest has been submitted for review.</strong></p>
+      <hr>
+      <p class="lead">
+        <a class="btn btn-primary btn-sm" href="{% url 'home' %}" role="button">Continue to homepage</a>
+      </p>
+  </div>
+</div>
+
+{% endblock %}

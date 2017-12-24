@@ -1,76 +1,102 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-<head>
-	{% include 'header.html' %}
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	{% if site.title %}<title>{% if title %}{{ title }} &ndash; {% endif %}{{ site.title }}{% if not title and site.subtitle %} &ndash; {{ site.subtitle }}{% endif %}</title>{% endif %}
-</head>
-<body>
-	<nav class="navbar navbar-inverse navbar-static-top navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Open Source Help Community</a>
-			</div>
-			<div id="navbar" class="navbar-collapse collapse">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="https://www.youtube.com/channel/UC1_IAby-9me3iICtxuiDL5Q">Sessions</a></li>
-					<li><a href="https://github.com/OpenSourceHelpCommunity">Resources</a></li>
-					<li><a href="mailto:opensourcehelpcommunity@gmail.com">Contact</a></li>
-					<li><a href="https://opensourcehelp.herokuapp.com/">Join Us!</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
 
-	<div id="content">
-	{% block content %}{% endblock %}
-	{% block footer %}
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<div class="social">
-						<ul>
-							<span class="col-sm-6 left-align">
+<head>
+  {% include 'header.html' %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> {% if site.title %}
+  <title>
+    {% if title %} {{ title }} &ndash; {% endif %} {{ site.title }} {% if not title and site.subtitle %} &ndash; {{ site.subtitle }} {% endif %}
+  </title>
+  {% endif %}
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-static-top navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        <a class="navbar-brand" href="{% url 'home' %}">Open Source Help Community</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sessions <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="https://www.youtube.com/channel/UC1_IAby-9me3iICtxuiDL5Q" target="_blank">View Session</a></li>
+              <li><a href="{% url 'request_session' %}" target="_blank">Request a Session</a></li>
+            </ul>
+          </li>
+          <li><a href="https://github.com/OpenSourceHelpCommunity" target="_blank">Resources</a></li>
+          <li><a href="{% url 'contests' %}" target="_blank">Contests</a></li>
+          <li><a href="{% url 'journey' %}" target="_blank">Journey</a></li>
+          <li><a href="mailto:opensourcehelpcommunity@gmail.com" target="_blank">Contact</a></li>
+          <li><a href="https://opensourcehelp.herokuapp.com/" target="_blank">Join Us!</a></li>
+          {% if user.is_authenticated %}
+          <li><a href="#!">Hey {{ user.username }}!</a></li>
+          <li><a href="{% url 'account_logout' %}">Logout</a></li>
+          {% else %}
+          <li><a href="{% url 'account_login' %}">Sign In</a></li>
+          <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div>
+    {% block content %}{% endblock %}
+  </div>
+
+  {% block footer %}
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="social">
+            <ul>
+              <span class="col-sm-6 left-align">
 								<li>
-									<a href="https://www.facebook.com/opensourcehelpcommunity/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+									<a href="https://www.facebook.com/opensourcehelpcommunity/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 								</li>
 								<li>
-									<a href="https://twitter.com/oshelpcommunity"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+									<a href="https://twitter.com/oshelpcommunity" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 								</li>
 								<li>
-									<a href="https://github.com/OpenSourceHelpCommunity"><i class="fa fa-github" aria-hidden="true"></i></a>
+									<a href="https://github.com/OpenSourceHelpCommunity" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
 								</li>
 								<li>
-									<a href="https://www.youtube.com/channel/UC1_IAby-9me3iICtxuiDL5Q"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+									<a href="https://www.youtube.com/channel/UC1_IAby-9me3iICtxuiDL5Q" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+								</li>
+                <li>
+									<a href="https://opensourcehelp.herokuapp.com/" target="_blank"><i class="fa fa-slack" aria-hidden="true"></i></a>
 								</li>
 							</span>
-							<span class="col-sm-6 backToTop right-align">
+              <span class="col-sm-6 back-to-top right-align">
 								<a id="toTop" name="Back to top!">Back to top</a>
 							</span>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-12">
-				<div class="copyright">
-					&copy; 2017 Open Source Help Community
-				</div>
-			</div>
-		</div>
-	</footer>
-	{% endblock %}
-	</div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12">
+        <div class="copyright">
+          &copy; 2017 Open Source Help Community
+        </div>
+      </div>
+    </div>
+  </footer>
+  {% endblock %}
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<script src="{% static "main/js/script.js"%}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="{% static "main/js/script.js" %}"></script>
+  {% block javascript %}{% endblock %}
 </body>
+
 </html>
