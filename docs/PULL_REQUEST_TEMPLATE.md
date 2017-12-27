@@ -3,7 +3,7 @@
 
 **Checklist**
 
-- [ ] My branch is up-to-date with the upstream `develop` branch.
+- [ ] My branch is up-to-date with the upstream `predev` branch.
 - [ ] I have added necessary documentation (if appropriate).
 
 **Which issue does this PR fix?**: fixes #
