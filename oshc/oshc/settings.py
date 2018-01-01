@@ -26,12 +26,11 @@ DEBUG = os.getenv("DEBUG", False)
 ALLOWED_HOSTS = ['*']
 
 # Tuple of people who get error notifications
-ADMINS = [
-    ('Tapasweni Pathak', 'tapaswenipathak@gmail.com'),
-    ('Nikhita Raghunath', 'nikitaraghunath@gmail.com'),
-    ('Ibrahim Jarif', 'jarifibrahim@gmail.com'),
-    ('Amar Prakash Pandey', 'amar.om1994@gmail.com')
-]
+ADMINS = [('Tapasweni Pathak', 'tapaswenipathak@gmail.com'),
+          ('Nikhita Raghunath', 'nikitaraghunath@gmail.com'),
+          ('Ibrahim Jarif',
+           'jarifibrahim@gmail.com'), ('Amar Prakash Pandey',
+                                       'amar.om1994@gmail.com')]
 
 # Application definition
 
@@ -95,20 +94,24 @@ AUTHENTICATION_BACKENDS = (
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.'
-                'UserAttributeSimilarityValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.'
+        'UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.'
-                'MinimumLengthValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.'
+        'MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.'
-                'CommonPasswordValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.'
+        'CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.'
-                'NumericPasswordValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.'
+        'NumericPasswordValidator',
     },
 ]
 
@@ -154,9 +157,7 @@ STATIC_URL = '/static/'
 PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'main/'),
-)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'main/'), )
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'email'

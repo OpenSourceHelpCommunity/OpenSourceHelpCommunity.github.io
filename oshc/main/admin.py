@@ -26,6 +26,7 @@ class contestAdmin(admin.ModelAdmin):
         else:
             message_bit = "{} contests were".format(contest_approved)
         self.message_user(request, "{} approved.".format(message_bit))
+
     approve_contest.short_description = "Approve"
 
 

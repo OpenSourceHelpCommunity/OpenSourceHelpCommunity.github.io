@@ -16,8 +16,10 @@ def request_session(request):
 
 def contests(request):
     contest_list = Contest.objects.all()
-    return render(request, 'contests.html',
-                  context={'contest_list': contest_list})
+    return render(
+        request, 'contests.html', context={
+            'contest_list': contest_list
+        })
 
 
 def contest_new(request):
@@ -42,5 +44,4 @@ def submit_contest(request):
 
 def journey(request):
     journey_list = Journey.objects.order_by('start_date')
-    return render(request, 'journey.html',
-                  context={'Journey': journey_list})
+    return render(request, 'journey.html', context={'Journey': journey_list})

@@ -15,12 +15,17 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Journey',
             fields=[
-                ('id', models.AutoField(auto_created=True,
-                    primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(help_text='Journey title',
-                    max_length=128)),
-                ('description', models.TextField(help_text='Session details',
-                 max_length=512)),
+                ('id',
+                 models.AutoField(
+                     auto_created=True,
+                     primary_key=True,
+                     serialize=False,
+                     verbose_name='ID')),
+                ('title',
+                 models.CharField(help_text='Journey title', max_length=128)),
+                ('description',
+                 models.TextField(help_text='Session details',
+                                  max_length=512)),
                 ('start_date', models.DateTimeField()),
             ],
         ),

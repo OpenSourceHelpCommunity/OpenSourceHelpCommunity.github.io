@@ -20,9 +20,9 @@ before_script:
   - cd oshc/
   - python manage.py migrate --noinput
   - python manage.py collectstatic --noinput
+  - git diff-tree --no-commit-id --name-only -r $REVISION | xargs pre-commit run --files
 
 script:
-  - flake8 . --ignore=E128
   - coverage run --source='main' manage.py test --verbosity 2
 
 after_success:

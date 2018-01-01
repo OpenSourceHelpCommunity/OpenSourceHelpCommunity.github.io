@@ -1,0 +1,6 @@
+[flake8]
+ignore =
+    # A continuation line is under-indented for a visual indentation.
+    E128
+
+max-line-length=80
