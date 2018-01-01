@@ -48,7 +48,7 @@ to install everything required to run this project on heroku as well as on your 
    cd oshc
    ```
 
-1. Install [pre-commit](pre-commit.com) into your git hooks. [pre-commit](pre-commit.com) will now run on every commit. Every time you clone a project that is using [pre-commit](pre-commit.com) running [pre-commit](pre-commit.com) install should always be the first thing you do after installing requirements.
+1. Install [pre-commit](http://pre-commit.com/) into your git hooks. [pre-commit](http://pre-commit.com/) will now run on every commit. Every time you clone a project that is using [pre-commit](http://pre-commit.com/) running [pre-commit](http://pre-commit.com/) install should always be the first thing you do after installing requirements.
 
    ```bash
    pre-commit install
