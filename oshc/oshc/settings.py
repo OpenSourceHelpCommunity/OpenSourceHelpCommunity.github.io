@@ -159,6 +159,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'main/'), )
 
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'email'
 EMAIL_HOST_PASSWORD = 'password'
