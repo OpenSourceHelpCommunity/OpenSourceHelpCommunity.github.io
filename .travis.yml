@@ -23,7 +23,7 @@ before_script:
   - git diff-tree --no-commit-id --name-only -r $REVISION | xargs pre-commit run --files
 
 script:
-  - coverage run --source='main' manage.py test --verbosity 2
+  - coverage run --source='.'  manage.py test --verbosity 2
 
 after_success:
   - coverage report
