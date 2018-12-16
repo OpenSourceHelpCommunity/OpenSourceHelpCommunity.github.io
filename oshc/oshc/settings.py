@@ -168,7 +168,9 @@ if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 EMAIL_USE_TLS = True
-
 LOGIN_REDIRECT_URL = "/"
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+# Allauth settings
+ACCOUNT_EMAIL_VERIFICATION = None  # Disable email verification of new user
