@@ -435,29 +435,18 @@ body {
 .timeline ul li {
   list-style-type: none;
   position: relative;
-  width: 6px;
+  width: 0.5%;
   margin: 0 auto;
   padding-top: 50px;
   background: #ffffff;
-}
- 
-.timeline ul li::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: inherit;
 }
 
 .timeline ul li div {
   position: relative;
   bottom: 0;
-  width: 400px;
+  width: 5000%;
   padding: 15px;
+  position: relative;
   background: #ffffff;
 }
  
@@ -471,21 +460,21 @@ body {
 }
 
 .timeline ul li:nth-child(odd) div {
-  left: 45px;
+  left: 500%;
 }
  
 .timeline ul li:nth-child(odd) div::before {
-  left: -15px;
+  left: -5%;
   border-width: 8px 16px 8px 0;
   border-color: transparent #ffffff transparent transparent;
 }
 
 .timeline ul li:nth-child(even) div {
-  left: -439px;
+  left: -5400%;
 }
  
 .timeline ul li:nth-child(even) div::before {
-  right: -15px;
+  right: -4.5%;
   border-width: 8px 0 8px 16px;
   border-color: transparent transparent transparent #ffffff;
 }

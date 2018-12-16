@@ -1,0 +1,7 @@
+[report]
+omit =
+    *migrations*
+    */tests/*
+    oshc/manage.py
+    oshc/oshc/*
+    */admin.py

@@ -71,4 +71,4 @@ In Linux, run the `export DEBUG=True` command in the terminal.
 Feel free to raise and fix issues.
 For any questions, join #oshc-dev on Slack. Get an invite [here](https://opensourcehelp.herokuapp.com/).
 
-Note : All design related tasks have reward associated with them.
+Note: All design related tasks have reward associated with them.
