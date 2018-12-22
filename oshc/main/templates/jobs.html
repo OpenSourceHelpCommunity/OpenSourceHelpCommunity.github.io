@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="timeline">
+<body>
+  <ul>
+    {% if Jobs %}
+      {% for j in Jobs %}
+      <li>
+      <div> {{j.start_date}}<br>{{j.title}} </div>
+      </li>
+    <!-- more list items here -->
+      {% endfor %}
+    {% else %}
+      <li>
+      <div> Social Media Account Coordinators </div>
+	  <p> OSHC is looking for people who can handle the social media channels. Send
+	  an email or drop a ping in #oshc-social-media Slack channel if interested,
+	  please resort last on DMs. Few guidelines:
+	  - Few to no retweets
+	  - Organise chats
+	  - Post essential updates
+	  - You are free (aligning your posts about OSHC)
+
+	  All applicants will be allowed to organise the channels for few days, based
+	  on your work you can continue to work as social media account coordinator.
+
+	  You'll be paid for the time you work on the channels, if you prefer goodies
+	  or books please DM in Slack channel.
+	  </p>
+      </li>
+    {% endif %}
+  </ul>
+</body>
+</section>
+{% endblock %}

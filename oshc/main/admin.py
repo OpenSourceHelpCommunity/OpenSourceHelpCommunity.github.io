@@ -29,7 +29,10 @@ class contestAdmin(admin.ModelAdmin):
 
     approve_contest.short_description = "Approve"
 
+class jobsAdmin(admin.ModelAdmin):
+    list_jobs = ('title', 'description')
 
 admin.site.register(chatSession, chatSessionAdmin)
 admin.site.register(Journey, journeyAdmin)
 admin.site.register(Contest, contestAdmin)
+admin.site.register(Jobs, jobsAdmin)
