@@ -26,9 +26,13 @@ class contestAdmin(admin.ModelAdmin):
         else:
             message_bit = "{} contests were".format(contest_approved)
         self.message_user(request, "{} approved.".format(message_bit))
+
     approve_contest.short_description = "Approve"
 
+class jobsAdmin(admin.ModelAdmin):
+    list_jobs = ('title', 'description')
 
 admin.site.register(chatSession, chatSessionAdmin)
 admin.site.register(Journey, journeyAdmin)
 admin.site.register(Contest, contestAdmin)
+admin.site.register(Jobs, jobsAdmin)

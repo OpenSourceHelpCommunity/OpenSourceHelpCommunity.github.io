@@ -8,3 +8,4 @@ whitenoise==3.3.1
 django-allauth==0.33.0
 django-crispy-forms==1.7.0
 flake8==3.4.1
+pre-commit==1.4.1

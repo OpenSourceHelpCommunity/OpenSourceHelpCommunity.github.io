@@ -16,14 +16,15 @@ install:
   - pip install coveralls
 
 before_script:
+  -  export SECRET_KEY='x1-pogt0-b5owbgq0=ui02-4v)bba!bg&1m8_$)8-&13(907qf'
   - psql -c 'create database travis_ci_test;' -U postgres
   - cd oshc/
   - python manage.py migrate --noinput
   - python manage.py collectstatic --noinput
+  - git diff-tree --no-commit-id --name-only -r $REVISION | xargs pre-commit run --files
 
 script:
-  - flake8 . --ignore=E128
-  - coverage run --source='main' manage.py test --verbosity 2
+  - coverage run --source='.'  manage.py test --verbosity 2
 
 after_success:
   - coverage report

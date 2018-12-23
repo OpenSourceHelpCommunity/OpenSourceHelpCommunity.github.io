@@ -6,8 +6,8 @@ from django.db import models
 
 class chatSession(models.Model):
     title = models.CharField(max_length=128, help_text="Session title")
-    profile_name = models.CharField(max_length=128,
-                                    help_text="The person's name")
+    profile_name = models.CharField(
+        max_length=128, help_text="The person's name")
     profile_url = models.URLField(help_text="The Url of the person's website")
     description = models.TextField(max_length=512, help_text="Session details")
     start_date = models.DateTimeField()
@@ -21,8 +21,8 @@ class chatSession(models.Model):
 class Contest(models.Model):
     name = models.CharField(max_length=128, help_text="Contest name")
     link = models.URLField(help_text="URL of the contest's website")
-    description = models.TextField(max_length=512,
-                                   help_text="Contest details", null=True)
+    description = models.TextField(
+        max_length=512, help_text="Contest details", null=True)
     start_date = models.DateField(null=True)
     end_date = models.DateField(null=True)
     approved = models.BooleanField(default=False)
