@@ -5,9 +5,9 @@ from .forms import ContestForm
 
 
 def home(request):
-    session_list = chatSession.objects.order_by('start_date')[:3]
-    context_dict = {'chatSession': session_list}
-    return render(request, 'index.html', context=context_dict)
+    # chat_session_list = chatSessions.objects.order_by('start_date')[:3]
+    # context_dict = {'chatSessions': chat_session_list}
+    return render(request, 'index.html')
 
 
 def request_session(request):
@@ -41,11 +41,21 @@ def add_contest(request):
 def submit_contest(request):
     return render(request, 'contest_submission.html')
 
+def chat_sessions(request):
+    chat_session_list = chatSession.objects.all()
+    return render(request, 'chatsessions.html',
+                  context={'chat_session_list': chat_session_list})
+
+
+def handler404(request):
+    response = render_to_response('404.html', {},
+                                  context_instance=RequestContext(request))
+    response.status_code = 404
+    return response
 
 def journey(request):
     journey_list = Journey.objects.order_by('start_date')
     return render(request, 'journey.html', context={'Journey': journey_list})
-
-
+  
 def jobs(request):
     return render(request, 'jobs.html')

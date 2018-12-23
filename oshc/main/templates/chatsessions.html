@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+h3 {
+    text-align: center;
+}
+span
+{
+    display: block;
+}
+</style>
+<section class="main-section">
+	<div class="container">
+            <h3>Open Source Contributors Chat Sessions</h3>
+            <div class="container-fluid">
+                <div class="row">
+                    {% for chat_session in chat_session_list %}
+                        {% if chat_session.approved %}
+                            <div class="col-lg-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" style="background-color: #0275d8;color:white">{{chat_session.name}}</div>
+                                    <div class="panel-body">
+																			<span><i class="fa fa-youtube"></i> <a href="{{chat_session.link}}">{{chat_session.link}}</a></span>
+                                        <span><i class="fa fa-clock-o"></i> {{chat_session.start_date}}</span>
+                                        <span><i class="fa fa-info-circle"></i> {{chat_session.description}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+	</div>
+</section>
+{% endblock %}
