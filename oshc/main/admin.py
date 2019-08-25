@@ -10,7 +10,7 @@ class chatSessionAdmin(admin.ModelAdmin):
     list_display = ('name', 'start_date')
 
 
-class journeyAdmin(admin.ModelAdmin):
+class openSourceDayAdmin(admin.ModelAdmin):
     list_display = ('title', 'start_date')
 
 
@@ -33,6 +33,6 @@ class jobsAdmin(admin.ModelAdmin):
     list_jobs = ('title', 'description')
 
 admin.site.register(chatSession, chatSessionAdmin)
-admin.site.register(Journey, journeyAdmin)
+admin.site.register(OpenSourceDay, openSourceDayAdmin)
 admin.site.register(Contest, contestAdmin)
 admin.site.register(Jobs, jobsAdmin)

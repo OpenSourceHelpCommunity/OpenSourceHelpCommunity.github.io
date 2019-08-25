@@ -57,9 +57,9 @@ def handler404(request):
     response.status_code = 404
     return response
 
-def journey(request):
-    journey_list = Journey.objects.order_by('start_date')
-    return render(request, 'journey.html', context={'Journey': journey_list})
+def opensourceday(request):
+    opensourceday_list = OpenSourceDay.objects.order_by('start_date')
+    return render(request, 'opensourceday.html', context={'OpenSourceDay': opensourceday_list})
   
 def jobs(request):
     return render(request, 'jobs.html')
